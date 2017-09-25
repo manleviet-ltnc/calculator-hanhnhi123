@@ -1,6 +1,6 @@
-﻿namespace Calculator
+﻿namespace calculator
 {
-    partial class Form1
+    partial class FrmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -202,6 +202,7 @@
             this.btnphantram.TabIndex = 17;
             this.btnphantram.Text = "%";
             this.btnphantram.UseVisualStyleBackColor = true;
+            this.btnphantram.Click += new System.EventHandler(this.btnPhanTram_Click);
             // 
             // btncham
             // 
@@ -211,6 +212,7 @@
             this.btncham.TabIndex = 19;
             this.btncham.Text = ".";
             this.btncham.UseVisualStyleBackColor = true;
+            this.btncham.Click += new System.EventHandler(this.btnThapPhan_Click);
             // 
             // btnbang
             // 
@@ -220,7 +222,7 @@
             this.btnbang.TabIndex = 22;
             this.btnbang.Text = "=";
             this.btnbang.UseVisualStyleBackColor = true;
-            this.btnbang.Click += new System.EventHandler(this.btnbang_Click);
+            this.btnbang.Click += new System.EventHandler(this.btnBang_Click);
             // 
             // btnnhan
             // 
@@ -240,6 +242,7 @@
             this.btnphay.TabIndex = 20;
             this.btnphay.Text = ",";
             this.btnphay.UseVisualStyleBackColor = true;
+            this.btnphay.Click += new System.EventHandler(this.btnThapPhan_Click);
             // 
             // btntat
             // 
@@ -249,6 +252,7 @@
             this.btntat.TabIndex = 1;
             this.btntat.Text = "C";
             this.btntat.UseVisualStyleBackColor = true;
+            this.btntat.Click += new System.EventHandler(this.btnNho_Click);
             // 
             // btnback
             // 
@@ -258,6 +262,7 @@
             this.btnback.TabIndex = 2;
             this.btnback.Text = "Backspace";
             this.btnback.UseVisualStyleBackColor = true;
+            this.btnback.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnthapphan
             // 
@@ -267,6 +272,7 @@
             this.btnthapphan.TabIndex = 12;
             this.btnthapphan.Text = "-/+";
             this.btnthapphan.UseVisualStyleBackColor = true;
+            this.btnthapphan.Click += new System.EventHandler(this.btnDoiDau_Click);
             // 
             // btncan
             // 
@@ -274,10 +280,11 @@
             this.btncan.Name = "btncan";
             this.btncan.Size = new System.Drawing.Size(32, 32);
             this.btncan.TabIndex = 7;
-            this.btncan.Text = "_/-";
+            this.btncan.Text = "√";
             this.btncan.UseVisualStyleBackColor = true;
+            this.btncan.Click += new System.EventHandler(this.btnCanBac2_Click);
             // 
-            // Form1
+            // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -306,9 +313,8 @@
             this.Controls.Add(this.btn0);
             this.Controls.Add(this.lblHienThi);
             this.KeyPreview = true;
-            this.Name = "Form1";
+            this.Name = "FrmMain";
             this.Text = "Form1";
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.ResumeLayout(false);
 
         }
