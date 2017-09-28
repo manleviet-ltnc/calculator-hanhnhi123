@@ -16,7 +16,7 @@ namespace calculator
             InitializeComponent();
         }
         bool isTypingNumber = false;
-        enum PhepToan { Cong, Tru, Nhan, Chia, PhanTram };
+        enum PhepToan {None, Cong, Tru, Nhan, Chia, PhanTram };
         PhepToan pheptoan;
 
         double nho;
@@ -38,6 +38,7 @@ namespace calculator
         }
         private void NhapPhepToan(object sender, EventArgs e)
         {
+            if (nho!=0)
             TinhKetQua();
             Button btn = (Button)sender;
             switch (btn.Text)
@@ -76,6 +77,8 @@ namespace calculator
         {
             TinhKetQua();
             isTypingNumber = false;
+            nho = 0;
+            pheptoan = PhepToan.None;
         }
 
         private void btnDoiDau_Click(object sender, EventArgs e)
@@ -108,6 +111,11 @@ namespace calculator
         {
             if (lblHienThi.Text.Length > 0)
                 lblHienThi.Text = lblHienThi.Text.Remove(lblHienThi.Text.Length - 1, 1);
+            if (lblHienThi.Text == "")
+            {
+                lblHienThi.Text = "0";
+            }
+                
         }
 
         private void btnCanBac2_Click(object sender, EventArgs e)
