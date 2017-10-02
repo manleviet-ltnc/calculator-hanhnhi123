@@ -149,5 +149,36 @@ namespace calculator
                     break;
             }
         }
-    }
-}
+        private void Nhapso(string so)
+        {
+            if (isTypingNumber)
+            {
+                if (lblHienThi.Text == "0")
+                    lblHienThi.Text = "";
+                lblHienThi.Text += so;
+            }
+            else
+            {
+                lblHienThi.Text = so;
+                isTypingNumber = true;
+            }
+        }
+        private void btnThapPhan_Click(object sender, EventArgs e)
+        {
+ 
+            if ( lblHienThi.Text.Contains("."))
+            {
+                if (lblHienThi.Text == "0.")
+                {
+                    lblHienThi.Text = "";
+                    Nhapso("0.");
+                }
+                return;
+            }
+
+            lblHienThi.Text += ".";
+        }
+        }
+        }
+        
+    
