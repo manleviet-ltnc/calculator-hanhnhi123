@@ -163,7 +163,7 @@ namespace calculator
                 isTypingNumber = true;
             }
         }
-        private void btnThapPhan_Click(object sender, EventArgs e)
+        private void btncham_Click(object sender, EventArgs e)
         {
  
             if ( lblHienThi.Text.Contains("."))
